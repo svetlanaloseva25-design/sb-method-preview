@@ -116,6 +116,16 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 .gate-telegram .gate-arrow svg{transform:rotate(180deg)}
 @media(max-width:360px){.gate-modal{padding:27px 17px 22px}.gate-modal h2{font-size:18px}.gate-modal>p,.gate-instruction{font-size:12px}}
 @media(min-width:700px){.gate-arrow{right:max(25px,calc((100vw - 600px)/2))}}
+</style><style>
+/* Stage 2 V2: straight, gently animated arrows aligned to browser controls */
+.gate-arrow{top:calc(env(safe-area-inset-top,0px) + 12px);right:19px;display:flex;flex-direction:column-reverse;align-items:center;gap:7px;animation:gateNudgeUp 2.2s ease-in-out infinite}
+.gate-arrow svg{width:26px;height:104px;stroke:#efc9da;stroke-width:1.3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gate-hint{font-size:11px;line-height:1.2;padding:9px 11px;border:1px solid #a17890a3;border-radius:9px;background:#2b1e2be8;color:#f6e5ee;box-shadow:0 0 14px #b86c9330;white-space:nowrap}
+.gate-telegram .gate-arrow{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 73px);right:9%;flex-direction:column;gap:7px;animation:gateNudgeDown 2.2s ease-in-out infinite}
+.gate-telegram .gate-arrow svg{transform:rotate(180deg);height:140px;width:24px}
+@keyframes gateNudgeUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes gateNudgeDown{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){.gate-arrow,.gate-telegram .gate-arrow{animation:none}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
@@ -127,7 +137,7 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 <div class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="15" height="17" rx="2"/><path d="m8 10 2 2 3-3M8 16h8"/></svg></div><div><strong>Рабочий трекер</strong><p>Планируй задачи, организуй работу и отслеживай выполнение важных дел.</p></div></div>
 <div class="action-card"><strong>Получить доступ</strong><p>Установи SB METHOD и авторизуйся, чтобы получить доступ к карте дня, персональному исследованию, бесплатным урокам и рабочему трекеру.</p><a href="https://sb-method-app-production.up.railway.app/?screen=entry" class="action-link">Установить приложение</a></div></section>
 <footer class="endline">SB METHOD · Авторская система онлайн-образования</footer></main><div id="overlay" class="browser-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-<div class="gate-arrow" aria-hidden="true"><svg viewBox="0 0 72 98"><path d="M36 92 V10 M20 28 L36 10 L52 28"/></svg><span>Нажмите •••</span></div>
+<div class="gate-arrow" aria-hidden="true"><span class="gate-hint">Нажмите •••</span><svg viewBox="0 0 24 120"><path d="M12 111 V9 M3 18 L12 9 L21 18"/></svg></div>
 <div class="gate-modal">
 <div class="gate-compass"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg></div>
 <h2 id="gate-title">Откройте сайт в браузере</h2>
@@ -154,8 +164,8 @@ const instruction=document.getElementById('gate-instruction');
 if(mode==='instagram'){
 instruction.innerHTML='Нажмите <b>•••</b> в правом верхнем углу и выберите <b>«Открыть в стороннем браузере»</b>.';
 }else{
-document.getElementById('overlay').classList.add('gate-telegram');
-instruction.innerHTML='Нажмите меню браузера Telegram внизу экрана и выберите <b>«Открыть в Safari»</b> или <b>«Открыть в браузере»</b>.';
+document.getElementById('overlay').classList.add('gate-telegram');document.querySelector('.gate-hint').textContent='Нажмите сюда';
+instruction.innerHTML='Нажмите на <b>значок компаса ◉ внизу справа</b>, чтобы открыть страницу в браузере телефона.';
 }
 })();
 </script><script>
