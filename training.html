@@ -1,7 +1,7 @@
 <!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#242329"><title>SB METHOD — выбор направления</title><script>
 (function(){
  var q=new URLSearchParams(location.search),ua=navigator.userAgent||'';
- var external=!/Instagram|Telegram/i.test(ua);
+ var taggedTelegram=q.get('from')==='telegram';var marker=false;try{marker=sessionStorage.getItem('sb_training_handoff')==='telegram'}catch(e){}var external=!/Instagram|Telegram/i.test(ua)&&!(taggedTelegram&&marker);
  var redirect=q.get('go')==='training'&&external&&!q.has('preview');
  if(redirect){
    document.documentElement.classList.add('sb-redirecting');
@@ -265,6 +265,7 @@ let mode=null;
 if(preview==='instagram'||preview==='telegram')mode=preview;
 else if(params.get('go')==='training'&&!standalone&&isInstagram)mode='instagram';
 else if(params.get('go')==='training'&&!standalone&&isTelegram)mode='telegram';
+else if(params.get('go')==='training'&&!standalone&&from==='telegram'){try{if(sessionStorage.getItem('sb_training_handoff')==='telegram')mode='telegram'}catch(e){}}
 if(!mode)return;
 document.getElementById('overlay').classList.add('show');document.body.classList.add('gate-active');
 const instruction=document.getElementById('gate-instruction');
@@ -285,7 +286,8 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
  const isStandalone=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches;
  const go=q.get('go');
  const destination='https://sb-pro.online/';
- if(go==='training'&&!inInstagram&&!inTelegram&&!isStandalone&&!q.has('preview')){
+ let taggedSession=false;try{taggedSession=q.get('from')==='telegram'&&sessionStorage.getItem('sb_training_handoff')==='telegram'}catch(e){}
+ if(go==='training'&&!inInstagram&&!inTelegram&&!taggedSession&&!isStandalone&&!q.has('preview')){
    window.location.replace(destination);
    return;
  }
