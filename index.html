@@ -312,6 +312,7 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
    const url=new URL('training.html',clean);
    url.searchParams.set('go','training');
    url.searchParams.set('from',inInstagram?'instagram':'telegram');
+   url.searchParams.set('handoff',String(Date.now())+'-'+Math.random().toString(36).slice(2,8));
    if(taggedTelegram&&!inInstagram){
      window.history.pushState({sbTelegramGate:true},'',url.toString());
      const gate=document.getElementById('overlay');
