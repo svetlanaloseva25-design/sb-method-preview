@@ -195,6 +195,27 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 }
 .browser-gate:not(.gate-telegram) .gate-arrow svg{margin:0 auto!important}
 @media(min-width:700px){.browser-gate:not(.gate-telegram) .gate-arrow{right:0!important}}
+</style><style>
+/* V21: independently anchor arrow tip and label for Instagram iPhone */
+.browser-gate:not(.gate-telegram) .gate-arrow{
+ position:fixed!important;top:calc(env(safe-area-inset-top,0px) + 6px)!important;
+ right:0!important;left:auto!important;width:70px!important;max-width:70px!important;
+ display:block!important;overflow:visible!important;
+ animation:none!important;transform:none!important;
+}
+.browser-gate:not(.gate-telegram) .gate-arrow svg{
+ display:block!important;position:relative!important;margin:0 auto!important;
+ width:22px!important;height:92px!important;
+ animation:gateFloatUp 2.5s ease-in-out infinite!important;
+}
+.browser-gate:not(.gate-telegram) .gate-hint{
+ position:absolute!important;right:8px!important;top:110px!important;
+ width:110px!important;max-width:none!important;
+ display:block!important;text-align:center!important;
+ margin:0!important;white-space:nowrap!important;
+ animation:gateFloatUp 2.5s ease-in-out infinite!important;
+}
+@media(prefers-reduced-motion:reduce){.browser-gate:not(.gate-telegram) .gate-arrow svg,.browser-gate:not(.gate-telegram) .gate-hint{animation:none!important}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
