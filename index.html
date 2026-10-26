@@ -91,6 +91,13 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 .action-card>strong,.action-card>p{display:block;margin-left:18px;margin-right:8px}
 .action-link{background:#faf8f9!important;color:#2d2a30!important;border:1px solid #f2edef!important;box-shadow:none!important;text-decoration:none!important;font-weight:700}
 @media(max-width:350px){.benefits-panel>h2,.benefits-panel>.panel-intro,.action-card>strong,.action-card>p{margin-left:12px}}
+</style><style>
+/* V9 — animated introductory status and portrait ring */
+.head-prompt:before{animation:sbIntroPulse 1.8s ease-in-out infinite;box-shadow:0 0 0 0 rgba(186,135,159,.36)}
+@keyframes sbIntroPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(186,135,159,.35)}50%{opacity:.55;box-shadow:0 0 0 5px rgba(186,135,159,.08)}}
+.author-mark{border:2px solid #96516f!important;box-shadow:0 0 0 3px #f9f7f8,0 0 0 4px #c4a0b1!important;background:#eee7eb!important;overflow:hidden}
+.author-mark img{width:100%;height:100%;object-fit:cover;display:block}
+@media(prefers-reduced-motion:reduce){.head-prompt:before{animation:none}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
