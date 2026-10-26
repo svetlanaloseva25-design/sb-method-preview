@@ -158,6 +158,20 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 /* V18 Instagram pointer anchored to actual upper-right browser menu */
 .browser-gate:not(.gate-telegram) .gate-arrow{right:calc(8.5vw - 70px)!important;top:calc(env(safe-area-inset-top,0px) + 8px)!important}
 @media(min-width:700px){.browser-gate:not(.gate-telegram) .gate-arrow{right:calc(8.5vw - 70px)!important}}
+</style><style>
+/* V19: anchor Instagram hint by its own center, keep inside viewport */
+.browser-gate:not(.gate-telegram) .gate-arrow{
+  left:auto!important;
+  right:calc(8.5vw - 12px)!important;
+  width:120px!important;
+  max-width:120px!important;
+  align-items:center!important;
+  transform:none;
+  box-sizing:border-box;
+}
+.browser-gate:not(.gate-telegram) .gate-arrow svg{flex:none}
+.browser-gate:not(.gate-telegram) .gate-hint{max-width:120px;box-sizing:border-box}
+@media(min-width:700px){.browser-gate:not(.gate-telegram) .gate-arrow{right:calc(8.5vw - 12px)!important}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
