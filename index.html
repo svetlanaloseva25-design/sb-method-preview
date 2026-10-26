@@ -306,8 +306,11 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
    if(!inInstagram&&!inTelegram&&!taggedTelegram)return;
    event.preventDefault();
    try{sessionStorage.setItem('sb_training_handoff','telegram')}catch(e){}
-   const url=new URL('training.html',window.location.href);
-   url.searchParams.delete('preview');
+   const clean=new URL(window.location.href);
+   clean.searchParams.delete('go');
+   clean.searchParams.delete('preview');
+   window.history.replaceState(null,'',clean.toString());
+   const url=new URL('training.html',clean);
    url.searchParams.set('go','training');
    url.searchParams.set('from',inInstagram?'instagram':'telegram');
    window.location.assign(url.toString());
