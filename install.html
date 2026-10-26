@@ -18,8 +18,13 @@
 .action{font-size:13px;padding:15px 12px;margin-top:5px}
 .note{font-size:11px;padding:11px 12px;margin-bottom:14px}
 .fine{font-size:12px;line-height:1.75;margin:20px 5px 0;color:#d2c5ce}
+/* Installation V3: calmer header and breathing room */
+.install-title{font-size:clamp(22px,5.4vw,26px);line-height:1.35;letter-spacing:-.55px;margin:0 0 13px}
+.install-intro{font-size:13px;line-height:1.65;margin:0 0 27px}
+.device-switch{margin:0 0 19px}
+.panel{padding-top:25px}
 </style></head><body><main class="shell">
-<h1 class="install-title">Установи SB METHOD на телефон</h1><p class="install-intro">Выбери устройство и следуй инструкции.</p>
+<h1 class="install-title">Установка SB METHOD</h1><p class="install-intro">Выбери устройство и следуй инструкции.</p>
 <div class="device-switch" role="group" aria-label="Выберите устройство"><button id="iphone" type="button">iPhone</button><button id="android" type="button">Android</button></div>
 <section class="panel" id="ios-panel"><h2>Установка на iPhone</h2><p class="sub">Открой SB METHOD в Safari и выполни три простых шага.</p>
 <div class="step"><div class="number">01</div><div><strong>Открой приложение в Safari</strong><p>Нажми кнопку ниже. Если ссылка откроется внутри Instagram или Telegram, сначала выбери открытие во внешнем браузере.</p></div></div>
@@ -32,7 +37,7 @@
 <div class="step"><div class="number">03</div><div><strong>Открой и авторизуйся</strong><p>Запусти SB METHOD с главного экрана, чтобы получить доступ к кабинету и сертификату.</p></div></div>
 <div class="note">Если системная установка не предлагается, добавь сайт на главный экран через меню Chrome.</div>
 <a class="action" href="https://sb-method-app-production.up.railway.app/?screen=entry">Открыть SB METHOD</a></section>
-<p class="fine">После установки и авторизации тебе будут доступны обучение, карта дня, персональные исследования и инструменты для организации рабочих задач.</p>
+
 </main><script>
 const iphone=document.getElementById('iphone'),android=document.getElementById('android'),ios=document.getElementById('ios-panel'),and=document.getElementById('android-panel');
 function setDevice(v){const isIos=v==='ios';iphone.classList.toggle('active',isIos);android.classList.toggle('active',!isIos);ios.classList.toggle('hidden',!isIos);and.classList.toggle('hidden',isIos)}
