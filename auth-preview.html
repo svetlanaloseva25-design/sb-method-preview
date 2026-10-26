@@ -24,4 +24,16 @@ p{font-size:13px;line-height:1.75;color:#6c656c;margin-bottom:23px}
 .notice{display:flex;align-items:center;gap:9px;border:1px solid #e9dfe5;background:#f1ecef;border-radius:15px;padding:15px 13px;font-size:12px;line-height:1.5;color:#594a55;margin-bottom:18px}
 .notice-dot{flex:0 0 8px;width:8px;height:8px;background:#987187;border-radius:50%;animation:pulse 1.7s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.35;transform:scale(.8)}}
-</style></head><body><main class="shell"><section class="panel" id="welcome"><div class="eyebrow">ВХОД В ПРИЛОЖЕНИЕ</div><h1>Добро пожаловать!</h1><p>Войди через Telegram, чтобы открыть личный кабинет и продолжить работу.</p><button class="button" id="begin">Войти через Telegram</button></section><section class="panel hidden" id="verify"><div class="eyebrow">ПОДТВЕРЖДЕНИЕ ВХОДА</div><h1>Подтверди вход в Telegram</h1><p>Открой уведомление от официального Telegram и нажми «Принять», чтобы продолжить.</p><div class="notice"><span class="notice-dot"></span><span>Ожидаем подтверждение в Telegram</span></div><button class="button secondary" id="back">Вернуться назад</button></section></main><script>const w=document.getElementById('welcome'),v=document.getElementById('verify');document.getElementById('begin').onclick=()=>{w.classList.add('hidden');v.classList.remove('hidden')};document.getElementById('back').onclick=()=>{v.classList.add('hidden');w.classList.remove('hidden')};</script></body></html>
+/* V4 premium light / pearl */
+html{background:#f5f2f3}
+body{background:radial-gradient(ellipse at 86% 14%,rgba(179,139,158,.20),transparent 50%),linear-gradient(155deg,#faf8f8,#eee9ec 68%,#f7f4f5);color:#302b31}
+.shell{max-width:400px}
+.panel{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(250,248,249,.91));border:1px solid rgba(255,255,255,.98);border-radius:26px;box-shadow:0 16px 48px rgba(76,55,67,.085),0 1px 0 #fff inset;padding:31px 25px 26px}
+.eyebrow{display:none}
+h1{font-size:24px;line-height:1.3;font-weight:600;letter-spacing:-.65px;margin-bottom:17px}
+p{color:#6f666d;font-size:13px;line-height:1.75;margin-bottom:26px}
+.button{background:#302d33;font-size:13px;font-weight:600;box-shadow:none}
+.button.secondary{background:#eee9ec;color:#5e5059}
+.notice{background:#f5f0f2;border-color:#eae0e5;color:#665760}
+.notice-dot{background:#9c7087}
+</style></head><body><main class="shell"><section class="panel" id="welcome"><div class="eyebrow"></div><h1>Рады тебя видеть</h1><p>Войди в свой кабинет, чтобы продолжить с того места, где остановилась.</p><button class="button" id="begin">Войти через Telegram</button></section><section class="panel hidden" id="verify"><div class="eyebrow"></div><h1>Остался один шаг</h1><p>Подтверди запрос на вход в Telegram. После подтверждения откроется твой кабинет.</p><div class="notice"><span class="notice-dot"></span><span>Ожидаем подтверждение</span></div><button class="button secondary" id="back">Вернуться назад</button></section></main><script>const w=document.getElementById('welcome'),v=document.getElementById('verify');document.getElementById('begin').onclick=()=>{w.classList.add('hidden');v.classList.remove('hidden')};document.getElementById('back').onclick=()=>{v.classList.add('hidden');w.classList.remove('hidden')};</script></body></html>
