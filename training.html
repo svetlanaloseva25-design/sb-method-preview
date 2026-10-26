@@ -261,6 +261,21 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 (function(){
 const params=new URLSearchParams(location.search),from=(params.get('from')||'').toLowerCase(),preview=(params.get('preview')||'').toLowerCase(),ua=navigator.userAgent||'';
 const isInstagram=/Instagram/i.test(ua),isTelegram=/Telegram/i.test(ua),standalone=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches;
+const token=params.get('handoff'),isPreview=preview==='instagram'||preview==='telegram';
+const returnToSelection=()=>{const u=new URL('index.html',location.href);u.search='';u.searchParams.set('from',from||'instagram');location.replace(u.toString())};
+if(isInstagram&&!isPreview&&token){
+ try{
+  const key='sb_method_handoff_'+token;
+  if(sessionStorage.getItem(key)==='seen'){returnToSelection();return}
+  sessionStorage.setItem(key,'seen');
+ }catch(e){}
+ let hiddenAt=0;
+ document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){hiddenAt=Date.now();return}
+  if(hiddenAt&&Date.now()-hiddenAt>1800){returnToSelection()}
+ });
+ window.addEventListener('pageshow',e=>{if(e.persisted)returnToSelection()});
+}
 let mode=null;
 if(preview==='instagram'||preview==='telegram')mode=preview;
 else if(params.get('go')==='training'&&!standalone&&isInstagram)mode='instagram';
