@@ -216,6 +216,29 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
  animation:gateFloatUp 2.5s ease-in-out infinite!important;
 }
 @media(prefers-reduced-motion:reduce){.browser-gate:not(.gate-telegram) .gate-arrow svg,.browser-gate:not(.gate-telegram) .gate-hint{animation:none!important}}
+</style><style>
+/* V22: preserve exact arrow position, align label and refine text rhythm */
+.browser-gate:not(.gate-telegram) .gate-hint{
+  right:-13px!important;
+  top:110px!important;
+  width:96px!important;
+  max-width:96px!important;
+  padding:8px 6px!important;
+  font-size:10px!important;
+  text-align:center!important;
+  letter-spacing:-.1px!important;
+}
+.browser-gate:not(.gate-telegram) .gate-modal{
+  width:min(100%,385px)!important;
+}
+.gate-description{
+  font-weight:500!important;
+  font-size:12px!important;
+  line-height:1.8!important;
+  letter-spacing:-.15px!important;
+}
+.gate-description span{display:block;white-space:nowrap}
+@media(max-width:385px){.gate-description{font-size:clamp(9px,2.9vw,12px)!important}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
@@ -231,7 +254,7 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 <div class="gate-modal">
 <div class="gate-compass"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg></div>
 <h2 id="gate-title">Откройте сайт в браузере</h2>
-<p>Для более быстрой и комфортной загрузки рекомендуем открыть страницу в браузере телефона.</p>
+<p class="gate-description"><span>Для более быстрой и комфортной</span><span>загрузки рекомендуем открыть страницу</span><span>в браузере телефона.</span></p>
 <div class="gate-instruction" id="gate-instruction"></div>
 </div></div>
 <script>
