@@ -249,6 +249,12 @@ h2{font-size:22px;line-height:1.36;letter-spacing:-.55px;margin:13px 0 11px;font
 }
 .gate-description span{display:block;white-space:nowrap}
 @media(max-width:385px){.gate-description{font-size:clamp(9px,2.9vw,12px)!important}}
+</style><style>
+/* V30 Telegram instruction and compass target alignment */
+.gate-telegram .telegram-second-line{display:block!important;margin-top:1px;white-space:nowrap}
+.gate-telegram .gate-arrow{right:calc(9.2% - 35px)!important;bottom:calc(env(safe-area-inset-bottom,0px) + 16px)!important}
+.gate-telegram .gate-arrow svg{height:90px!important}
+@media(max-width:360px){.gate-telegram .gate-arrow{right:calc(9.2% - 29px)!important}}
 </style></head><body><main class="wrap"><header class="head"><div class="brand-row"><span class="brand-kicker">Авторская программа онлайн-образования</span></div><h1>SB METHOD</h1><p>Обучение, исследования и инструменты<br>для новых возможностей.</p><div class="head-prompt">Выбери, с чего начать</div></header>
 <section class="shortchoices"><article class="short light"><div class="education-label"><span class="laptop-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M8 20l1-4m7 4-1-4"/></svg></span><span>Обучение</span></div><h2>Освой профессию и начни работать онлайн</h2><p>Осваивай востребованные навыки, выполняй практические задания и учись работать с клиентами.</p><a href="https://sb-pro.online/" class="education-button">Подробнее</a></article></section>
 <section class="certificate-wrap" aria-label="Подарочный сертификат"><div class="certificate-face"><div class="certificate-orbits" aria-hidden="true"></div><div class="certificate-top"><span>ПОДАРОЧНЫЙ СЕРТИФИКАТ</span></div><div class="certificate-rule"></div><div class="certificate-meta"><span>SB METHOD</span><span class="certificate-status"><i class="green-pulse"></i> АКТИВИРУЙТЕ</span></div><div class="certificate-amount">5 000 ₽</div><div class="certificate-purpose">на обучение<br><strong>онлайн-профессиям</strong></div><div class="certificate-pill"><span class="diamond">✧</span> Активируйте после регистрации</div></div><a class="certificate-button" href="https://sb-method-app-production.up.railway.app/?screen=entry">Получить сертификат</a></section>
@@ -283,7 +289,7 @@ instruction.innerHTML='<span class="instruction-line">Нажмите <b>••�
 }else{
 document.getElementById('overlay').classList.add('gate-telegram');
 document.querySelector('.gate-hint').textContent='Нажмите сюда';
-instruction.innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg> внизу справа ';
+instruction.innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg><span class="telegram-second-line">внизу справа</span> ';
 }
 })();
 </script><script>
@@ -319,7 +325,7 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
      gate.classList.add('show','gate-telegram');
      document.body.classList.add('gate-active');
      gate.querySelector('.gate-hint').textContent='Нажмите сюда';
-     document.getElementById('gate-instruction').innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg> внизу справа';
+     document.getElementById('gate-instruction').innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg><span class="telegram-second-line">внизу справа</span>';
      return;
    }
    window.location.assign(url.toString());
