@@ -263,8 +263,8 @@ const params=new URLSearchParams(location.search),from=(params.get('from')||'').
 const isInstagram=/Instagram/i.test(ua),isTelegram=/Telegram/i.test(ua),standalone=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches;
 let mode=null;
 if(preview==='instagram'||preview==='telegram')mode=preview;
-else if(!standalone&&from==='instagram'&&isInstagram)mode='instagram';
-else if(!standalone&&from==='telegram'&&isTelegram)mode='telegram';
+else if(params.get('go')==='training'&&!standalone&&isInstagram)mode='instagram';
+else if(params.get('go')==='training'&&!standalone&&isTelegram)mode='telegram';
 if(!mode)return;
 document.getElementById('overlay').classList.add('show');document.body.classList.add('gate-active');
 const instruction=document.getElementById('gate-instruction');
@@ -275,6 +275,31 @@ document.getElementById('overlay').classList.add('gate-telegram');
 document.querySelector('.gate-hint').textContent='Нажмите сюда';
 instruction.innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg> внизу справа ';
 }
+})();
+</script><script>
+/* Training handoff: show the gate only after CTA, redirect when external. */
+(function(){
+ const q=new URLSearchParams(location.search);
+ const ua=navigator.userAgent||'';
+ const inInstagram=/Instagram/i.test(ua),inTelegram=/Telegram/i.test(ua);
+ const isStandalone=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches;
+ const go=q.get('go');
+ const destination='https://sb-pro.online/';
+ if(go==='training'&&!inInstagram&&!inTelegram&&!isStandalone&&!q.has('preview')){
+   window.location.replace(destination);
+   return;
+ }
+ const button=document.querySelector('a.education-button');
+ if(!button)return;
+ button.addEventListener('click',function(event){
+   if(!inInstagram&&!inTelegram)return;
+   event.preventDefault();
+   const url=new URL(window.location.href);
+   url.searchParams.delete('preview');
+   url.searchParams.set('go','training');
+   url.searchParams.set('from',inInstagram?'instagram':'telegram');
+   window.location.assign(url.toString());
+ });
 })();
 </script><script>
 (function(){const t=document.getElementById('message-time');if(!t)return;const key='sbmethod_author_message_seen_v1';let time;try{time=localStorage.getItem(key);if(!time){time=new Date().toISOString();localStorage.setItem(key,time)}}catch(e){time=new Date().toISOString()}t.textContent=new Intl.DateTimeFormat('ru-RU',{hour:'2-digit',minute:'2-digit'}).format(new Date(time));})();
