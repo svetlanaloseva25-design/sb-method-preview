@@ -304,7 +304,7 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
  button.addEventListener('click',function(event){
    if(!inInstagram&&!inTelegram)return;
    event.preventDefault();
-   const url=new URL(window.location.href);
+   const url=new URL('training.html',window.location.href);
    url.searchParams.delete('preview');
    url.searchParams.set('go','training');
    url.searchParams.set('from',inInstagram?'instagram':'telegram');
