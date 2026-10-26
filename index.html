@@ -302,8 +302,10 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
  const button=document.querySelector('a.education-button');
  if(!button)return;
  button.addEventListener('click',function(event){
-   if(!inInstagram&&!inTelegram)return;
+   const taggedTelegram=q.get('from')==='telegram';
+   if(!inInstagram&&!inTelegram&&!taggedTelegram)return;
    event.preventDefault();
+   try{sessionStorage.setItem('sb_training_handoff','telegram')}catch(e){}
    const url=new URL('training.html',window.location.href);
    url.searchParams.delete('preview');
    url.searchParams.set('go','training');
