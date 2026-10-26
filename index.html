@@ -305,15 +305,31 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
    const taggedTelegram=q.get('from')==='telegram';
    if(!inInstagram&&!inTelegram&&!taggedTelegram)return;
    event.preventDefault();
-   try{sessionStorage.setItem('sb_training_handoff','telegram')}catch(e){}
    const clean=new URL(window.location.href);
    clean.searchParams.delete('go');
    clean.searchParams.delete('preview');
-   window.history.replaceState(null,'',clean.toString());
+   window.history.replaceState({sbSelection:true},'',clean.toString());
    const url=new URL('training.html',clean);
    url.searchParams.set('go','training');
    url.searchParams.set('from',inInstagram?'instagram':'telegram');
+   if(taggedTelegram&&!inInstagram){
+     window.history.pushState({sbTelegramGate:true},'',url.toString());
+     const gate=document.getElementById('overlay');
+     gate.classList.add('show','gate-telegram');
+     document.body.classList.add('gate-active');
+     gate.querySelector('.gate-hint').textContent='Нажмите сюда';
+     document.getElementById('gate-instruction').innerHTML='Нажмите на значок компаса <svg class="inline-compass" viewBox="0 0 24 24" aria-label="Компас"><circle cx="12" cy="12" r="8"/><path d="m15.5 8.5-2.3 4.7-4.7 2.3 2.3-4.7z"/></svg> внизу справа';
+     return;
+   }
    window.location.assign(url.toString());
+ });
+ window.addEventListener('popstate',function(){
+   const gate=document.getElementById('overlay');
+   if(!gate)return;
+   if(!history.state||!history.state.sbTelegramGate){
+     gate.classList.remove('show','gate-telegram');
+     document.body.classList.remove('gate-active');
+   }
  });
 })();
 </script><script>
