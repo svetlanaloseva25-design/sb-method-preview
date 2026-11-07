@@ -344,4 +344,21 @@ instruction.innerHTML='Нажмите на значок компаса <svg clas
 })();
 </script><script>
 (function(){const t=document.getElementById('message-time');if(!t)return;const key='sbmethod_author_message_seen_v1';let time;try{time=localStorage.getItem(key);if(!time){time=new Date().toISOString();localStorage.setItem(key,time)}}catch(e){time=new Date().toISOString()}t.textContent=new Intl.DateTimeFormat('ru-RU',{hour:'2-digit',minute:'2-digit'}).format(new Date(time));})();
+</script><script>
+/* Keep the invitation on the approved landing until the visitor opens the app. */
+(()=>{'use strict';
+ const key='sb-landing-invite-v1',age=30*86400000,valid=c=>typeof c==='string'&&/^[a-f0-9]{16}$/.test(c);
+ const code=new URLSearchParams(location.search).get('ref');let saved=null;
+ try{saved=JSON.parse(localStorage.getItem(key)||'null');}catch{}
+ if(!saved||!valid(saved.code)||!Number.isFinite(saved.at)||saved.at>Date.now()||Date.now()-saved.at>=age)saved=null;
+ if(!saved&&valid(code)){saved={code,at:Date.now()};try{localStorage.setItem(key,JSON.stringify(saved));}catch{}}
+ for(const a of document.querySelectorAll('a[href]')){
+  const u=new URL(a.href,location.href);
+  if(!['app.sb-method.space','sb-method-app-production.up.railway.app'].includes(u.hostname))continue;
+  u.protocol='https:';u.host='app.sb-method.space';
+  if(saved)u.searchParams.set('ref',saved.code);
+  a.href=u.href;
+ }
+})();
+
 </script></body></html>
