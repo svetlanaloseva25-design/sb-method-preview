@@ -1,0 +1,135 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#242329"><meta name="description" content="Карта дня, персональное исследование, знакомство с онлайн-профессиями и рабочий трекер в SB METHOD."><title>SB METHOD — Карта дня и исследование</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse 95% 40% at 90% 0,rgba(117,78,105,.15),transparent 75%),#242329;color:#fcf9fb;font-family:Montserrat,Arial,sans-serif;-webkit-font-smoothing:antialiased}.wrap{width:100%;max-width:620px;margin:auto;padding:38px 20px 35px}.head{padding:0 9px;margin:0 0 29px}.brand-kicker{font-size:12px;line-height:1.8;color:#cbbfc7;margin:0 0 16px}.head h1{font-size:30px;line-height:1.2;font-weight:600;letter-spacing:1.4px;margin:0 0 18px}.head-description{font-size:14px;line-height:1.8;color:#e0d4dc;margin:0;max-width:360px}
+.tarot-feature{position:relative;isolation:isolate;overflow:hidden;border:1px solid #a78caa80;border-radius:24px;margin:0 0 24px;padding:28px 26px 25px;min-height:260px;background:radial-gradient(ellipse at 80% 12%,#b192b43d,transparent 48%),radial-gradient(ellipse at 8% 100%,#9d647b35,transparent 58%),linear-gradient(125deg,#594357,#42364e 56%,#302c3c);box-shadow:inset 0 1px #f5dfef40,0 16px 38px #12101730}.tarot-feature:before{content:"";position:absolute;inset:8px;border:1px solid #e4c9e31c;border-radius:17px;pointer-events:none}.tarot-feature:after{content:"";position:absolute;inset:-60%;z-index:-1;background:linear-gradient(115deg,transparent 39%,#f6dff21a 48%,transparent 58%);animation:sheen 12s ease-in-out infinite;pointer-events:none}.tarot-brand{font-size:10px;letter-spacing:2px;font-weight:500;color:#dac5db;position:relative;z-index:2}.tarot-composition{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:22px 0 16px}.tarot-title{font-size:27px;font-weight:500;line-height:1.3;letter-spacing:-.5px;margin:0;position:relative;z-index:2}.tarot-deck{position:relative;width:98px;height:144px;flex:0 0 98px;margin:0 14px 0 0;transform:rotate(7deg)}.tarot-back{position:absolute;inset:0;border:1px solid #cab0ce;border-radius:10px;background:linear-gradient(145deg,#806284,#3d334b);box-shadow:0 12px 22px #19101f40}.back-one{transform:rotate(-21deg) translate(-13px,0);opacity:.55}.back-two{transform:rotate(-10deg) translate(-6px,-1px);opacity:.8}.front{padding:8px;background:radial-gradient(ellipse at 25% 0%,#c4a3bf52,transparent 67%),linear-gradient(140deg,#836681,#55425f 58%,#3c3249);box-shadow:inset 0 1px 2px #fce3f875,0 14px 25px #17101d55}.tarot-frame{height:100%;border:1px solid #dfc7e07a;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;position:relative}.tarot-frame:before,.tarot-frame:after{content:"";position:absolute;width:3px;height:3px;border:1px solid #e9d4e9;transform:rotate(45deg);top:8px}.tarot-frame:after{top:auto;bottom:8px}.tarot-frame svg{width:53px;height:60px;stroke:#ecdaeb;stroke-width:.8;fill:none}.tarot-frame span{font-size:6px;letter-spacing:1.3px;color:#e4d2e4}.tarot-caption{margin:0;padding-top:17px;border-top:1px solid #e5cee42b;color:#d8c7db;font-size:12px;line-height:1.7}.tarot-orbit{position:absolute;width:260px;height:260px;right:-88px;top:-110px;border:1px solid #eed9ee13;border-radius:50%;box-shadow:0 0 0 33px #efdaef05;pointer-events:none}
+.benefits-panel{background:linear-gradient(145deg,#3d363e,#2e2c33);border:1px solid #645867;border-radius:24px;padding:25px 17px 22px}.benefits-panel>h2{font-size:22px;line-height:1.45;font-weight:500;letter-spacing:-.4px;margin:0 14px 13px}.panel-intro{font-size:14px;line-height:1.8;color:#d8ccd5;margin:0 14px 24px}.benefit-card{display:flex;align-items:flex-start;gap:13px;background:#fcfafb;color:#29252b;border-radius:18px;padding:21px 18px;margin-top:12px}.benefit-icon{flex:0 0 38px;height:38px;border-radius:13px;display:grid;place-items:center;background:#f0edef;color:#85586b}.benefit-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.benefit-card strong{display:block;font-size:14px;line-height:1.55;font-weight:700}.benefit-card p{font-size:14px;line-height:1.75;color:#7a717a;margin:9px 0 0}.action-card{margin-top:29px}.action-card>strong{display:block;font-size:16px;line-height:1.55;margin:0 14px 12px;font-weight:700}.action-card>p{font-size:14px;line-height:1.8;color:#d9cdd6;margin:0 14px 23px}.action-link{display:block;text-align:center;text-decoration:none;border:1px solid #f2edef;background:#faf8f9;color:#2d2a30;border-radius:999px;font-size:14px;font-weight:500;line-height:1.5;padding:18px 16px}.action-link:hover{background:#fff}.action-link:focus-visible{outline:2px solid #ddbdd4;outline-offset:5px}.endline{font-size:10px;line-height:1.8;text-align:center;color:#a99ca6;margin:25px 9px 0}
+@keyframes sheen{0%,15%,100%{transform:translateX(-28%)}65%{transform:translateX(28%)}}@media(prefers-reduced-motion:reduce){.tarot-feature:after{animation:none}}@media(min-width:700px){.wrap{padding-top:48px}.tarot-feature{padding:30px 32px 26px}.tarot-title{font-size:34px}.tarot-deck{width:113px;height:165px;flex-basis:113px;margin-right:38px}.tarot-composition{margin:20px 0}.benefits-panel{padding:28px 23px 25px}.benefit-card{padding:23px 22px}}@media(max-width:360px){.wrap{padding:30px 16px}.head{padding:0 7px}.brand-kicker{font-size:11px}.head h1{font-size:27px}.tarot-feature{padding:24px 21px}.tarot-title{font-size:24px}.tarot-deck{width:80px;height:122px;flex-basis:80px;margin-right:7px}.benefits-panel{padding:23px 12px 19px}.benefits-panel>h2{font-size:21px}.benefit-card{padding:19px 15px;gap:11px}.benefit-icon{flex-basis:32px;height:32px;border-radius:10px}.benefit-icon svg{width:20px;height:20px}.benefit-card strong,.benefit-card p{font-size:13px}}
+
+/* V3: single brand and a compact, balanced card fan. */
+.head{margin:0 0 25px;padding:0 10px}
+.head h1.intro-title{font-size:15px;line-height:1.85;letter-spacing:0;font-weight:400;color:#dfd4dc;margin:0;max-width:410px}
+.tarot-brand{font-size:13px;letter-spacing:2.4px;color:#eee1ef;font-weight:600}
+.tarot-composition{gap:16px;margin:26px 0 23px}
+.tarot-deck{width:82px;height:126px;flex-basis:82px;margin-right:34px;transform:none}
+.back-one{transform:translate(-12px,3px) rotate(-13deg);opacity:.65}
+.back-two{transform:translate(11px,3px) rotate(12deg);opacity:.75}
+.front{transform:rotate(-2deg);padding:7px}
+.tarot-frame{gap:14px}
+.tarot-frame svg{width:43px;height:51px}
+.tarot-frame span{font-size:5px;letter-spacing:1px}
+@media(min-width:700px){.head{padding:0 13px;margin-bottom:26px}.head h1.intro-title{font-size:16px}.tarot-deck{width:101px;height:153px;flex-basis:101px;margin-right:68px}.tarot-frame svg{width:52px;height:61px}.tarot-frame span{font-size:6px}.tarot-composition{margin:28px 0 25px}}
+@media(max-width:360px){.head h1.intro-title{font-size:14px}.tarot-title{font-size:22px}.tarot-deck{width:70px;height:110px;flex-basis:70px;margin-right:24px}.tarot-composition{gap:14px}.tarot-frame svg{width:36px;height:43px}.tarot-frame span{font-size:4.5px;letter-spacing:.7px}.tarot-frame{gap:10px}}
+.back-outer-left{transform:translate(-9px,5px) rotate(-23deg);opacity:.62}.back-outer-right{transform:translate(9px,5px) rotate(22deg);opacity:.67}.back-one{transform:translate(-5px,2px) rotate(-12deg);opacity:.8}.back-two{transform:translate(5px,2px) rotate(11deg);opacity:.85}
+
+/* V5: enlarge the cards themselves while preserving clear side margins. */
+.tarot-composition{gap:30px;margin:28px 0 26px}
+.tarot-deck{width:112px;height:174px;flex-basis:112px;margin-right:22px}
+.tarot-title{flex:1;min-width:0;font-size:26px}
+.back-outer-left{transform:translate(-8px,4px) rotate(-14deg)}
+.back-outer-right{transform:translate(8px,4px) rotate(14deg)}
+.back-one{transform:translate(-4px,2px) rotate(-7deg)}
+.back-two{transform:translate(4px,2px) rotate(7deg)}
+.front{padding:9px}
+.tarot-frame{gap:18px}
+.tarot-frame svg{width:60px;height:70px}
+.tarot-frame span{font-size:7px;letter-spacing:1px}
+@media(min-width:700px){.tarot-deck{width:143px;height:220px;flex-basis:143px;margin-right:52px}.tarot-title{font-size:34px}.tarot-frame svg{width:75px;height:87px}.tarot-frame span{font-size:8px}}
+@media(max-width:360px){.tarot-deck{width:98px;height:153px;flex-basis:98px;margin-right:20px}.tarot-composition{gap:27px}.tarot-title{font-size:22px}.tarot-frame svg{width:52px;height:61px}.tarot-frame span{font-size:6px}.tarot-frame{gap:15px}}
+
+/* V6: center the fan higher and move its description into the hero. */
+.tarot-deck{transform:translateY(-10px)}
+.tarot-description{font-size:14px;line-height:1.8;color:#e8dce9;margin:0 0 20px}
+
+/* V7: landscape hero, keeping the approved card sizes and copy. */
+.tarot-feature{display:grid;grid-template-columns:minmax(0,1fr) 134px;grid-template-areas:"brand cards" "title cards" "description description" "caption caption";grid-template-rows:22px 132px auto auto;column-gap:30px;row-gap:10px;min-height:0;padding:24px 26px 20px}
+.tarot-composition{display:contents}
+.tarot-brand{grid-area:brand;align-self:start}
+.tarot-title{grid-area:title;align-self:center}
+.tarot-deck{grid-area:cards;align-self:center;justify-self:start;transform:none}
+.tarot-description{grid-area:description;margin:9px 0 0;line-height:1.65}
+.tarot-caption{grid-area:caption;padding-top:10px;margin-top:3px}
+@media(min-width:520px){.tarot-feature{grid-template-columns:minmax(0,1fr) 180px;grid-template-areas:"brand cards" "title cards" "description cards" "caption caption";grid-template-rows:auto auto 1fr auto;column-gap:28px;row-gap:14px;padding:26px 30px 21px}.tarot-title{align-self:start}.tarot-description{margin:0}.tarot-deck{justify-self:center;margin-right:0;transform:none}.tarot-caption{margin-top:5px}}
+@media(min-width:700px){.tarot-feature{grid-template-columns:minmax(0,1fr) 194px;column-gap:32px;row-gap:14px;padding:26px 32px 22px}.tarot-deck{margin-right:0}.tarot-title{font-size:32px}}
+@media(max-width:360px){.tarot-feature{grid-template-columns:minmax(0,1fr) 118px;grid-template-rows:22px 120px auto auto;column-gap:27px;padding:22px 21px 18px}.tarot-description{font-size:13px;line-height:1.65}}
+
+/* V8: centered cards and a narrow, centered description. */
+.tarot-feature{display:flex;flex-direction:column;align-items:center;gap:0;padding:24px 26px 21px;min-height:0}
+.tarot-brand{align-self:flex-start}
+.tarot-composition{display:flex;flex-direction:column;align-items:center;gap:20px;margin:18px 0 19px;width:100%}
+.tarot-title{align-self:center;flex:none;text-align:center;font-size:26px;line-height:1.3;margin:0}
+.tarot-deck{align-self:center;flex:none;width:112px;height:174px;margin:0;transform:none}
+.tarot-description{width:100%;max-width:290px;text-align:center;font-size:14px;line-height:1.7;margin:0 auto 17px}
+.tarot-caption{align-self:stretch;text-align:center;padding-top:12px;margin:0;font-size:12px}
+@media(min-width:700px){.tarot-feature{padding:24px 32px 22px}.tarot-composition{gap:20px;margin:15px 0 18px}.tarot-title{font-size:28px}.tarot-deck{width:143px;height:220px;margin:0}.tarot-description{max-width:310px}}
+@media(max-width:360px){.tarot-feature{padding:22px 21px 19px}.tarot-title{font-size:24px}.tarot-deck{width:104px;height:161px;margin:0}.tarot-description{max-width:250px;font-size:13px;line-height:1.7}.tarot-composition{gap:18px}}
+
+/* V9: text column on the left, vertically centered cards on the right. */
+.tarot-feature{display:block;padding:24px 26px 20px;min-height:0}
+.tarot-brand{display:block;text-align:left}
+.tarot-composition{display:grid;grid-template-columns:minmax(0,1fr) 140px;column-gap:18px;row-gap:0;align-items:center;margin:20px 0 20px;width:100%}
+.tarot-copy{min-width:0;text-align:left}
+.tarot-title{display:block;text-align:left;font-size:25px;line-height:1.3;margin:0 0 12px;letter-spacing:-.5px}
+.tarot-description{display:block;width:100%;max-width:290px;text-align:left;font-size:13px;line-height:1.65;margin:0;color:#e8dce9}
+.tarot-deck{grid-area:auto;align-self:center;justify-self:center;flex:none;width:112px;height:174px;margin:0;transform:translateY(-3px)}
+.tarot-caption{display:block;text-align:left;margin:0;padding-top:12px;font-size:12px}
+@media(min-width:520px){.tarot-composition{grid-template-columns:minmax(0,1fr) 190px;column-gap:32px;margin:20px 0}.tarot-title{font-size:30px}.tarot-description{font-size:14px;max-width:290px}.tarot-deck{width:130px;height:200px}}
+@media(min-width:700px){.tarot-feature{padding:26px 32px 22px}.tarot-composition{grid-template-columns:minmax(0,1fr) 194px;column-gap:32px;margin:18px 0 20px}.tarot-title{font-size:32px}.tarot-deck{width:143px;height:220px;margin:0}.tarot-description{font-size:14px;max-width:290px}}
+@media(max-width:360px){.tarot-feature{padding:22px 21px 18px}.tarot-composition{grid-template-columns:minmax(0,1fr) 119px;column-gap:14px;margin:18px 0}.tarot-title{font-size:22px;line-height:1.3;margin-bottom:11px}.tarot-description{font-size:12px;line-height:1.65}.tarot-deck{width:98px;height:153px;margin:0}.tarot-caption{font-size:11px}}
+
+/* Real card reveal; the surrounding fan and approved layout stay fixed. */
+.tarot-deck{perspective:900px}
+.front.flipping-card{padding:0;border:0;background:none;box-shadow:none;overflow:visible}
+.flip-inner{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;transition:none;transform:rotateY(0deg)}
+.flip-inner.revealed{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;border-radius:10px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #cab0ce}
+.flip-cover{padding:9px;background:radial-gradient(ellipse at 25% 0%,#c4a3bf52,transparent 67%),linear-gradient(140deg,#836681,#55425f 58%,#3c3249);box-shadow:inset 0 1px 2px #fce3f875,0 14px 25px #17101d55;transform:rotateY(0deg)}
+.flip-art{transform:rotateY(180deg);background:#17140f;overflow:hidden;box-shadow:0 14px 25px #17101d55}
+.flip-next{transform:rotateY(0deg);background:#17140f;overflow:hidden;box-shadow:0 14px 25px #17101d55}
+.flip-art img,.flip-next img{display:block;width:100%;height:100%;object-fit:contain}
+.tarot-caption-row{position:relative;width:100%}
+.tarot-caption-row .tarot-caption{padding-right:0;min-height:34px}
+.motion-toggle{position:absolute;right:0;top:9px;width:25px;height:25px;display:grid;place-items:center;padding:0;border:1px solid #dfc7e047;border-radius:50%;color:#e1cce2;background:#ffffff08;cursor:pointer}
+.motion-toggle[hidden]{display:none}.motion-toggle svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.motion-toggle .play-symbol{display:none}.motion-toggle[aria-pressed="true"] .pause-symbol{display:none}.motion-toggle[aria-pressed="true"] .play-symbol{display:block}.motion-toggle:focus-visible{outline:2px solid #ead5e7;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.flip-inner{transition:none}}
+
+.benefit-card p{line-height:1.6;color:#655d66;margin-top:8px}.benefit-card strong{font-size:16px;line-height:1.4;font-weight:600;letter-spacing:-.2px}.benefit-note{display:block;margin-top:13px;padding-top:11px;border-top:1px solid #e8e1e7;font-size:11px;line-height:1.6;color:#867581}.benefit-card{gap:12px}.benefit-card>div:last-child{min-width:0}@media(max-width:360px){.benefit-card strong{font-size:15px}}
+
+/* Pearl panels with a compact heading row and full-width description. */
+.benefit-card{display:grid;grid-template-columns:34px minmax(0,1fr);column-gap:12px;row-gap:0;padding:21px 22px;margin-top:14px;border:1px solid rgba(255,255,255,.8);border-radius:20px;background:linear-gradient(125deg,#fffefd 0%,#f4f0f3 100%);box-shadow:inset 0 1px 0 #fff,0 5px 18px #17131c16}
+.benefit-card>div:last-child{display:contents}
+.benefit-icon{grid-column:1;grid-row:1;width:34px;height:34px;align-self:center;border:1px solid #fff;border-radius:11px;background:linear-gradient(145deg,#fff,#e9e2e9);box-shadow:0 2px 5px #65506512,inset 0 1px 0 #fff;color:#7b5c70}
+.benefit-icon svg{width:20px;height:20px}
+.benefit-card strong{grid-column:2;grid-row:1;align-self:center;font-size:15px;line-height:1.4;color:#322b34}
+.benefit-card p{grid-column:1/-1;font-size:13px;line-height:1.65;color:#625c65;margin:12px 0 0}
+.benefit-note{grid-column:1/-1;margin-top:13px;padding-top:10px;border-color:#ded5df;font-size:10.5px;line-height:1.6;color:#7c6d7c}
+@media(max-width:480px){.benefit-card{padding:18px;border-radius:18px}.benefit-card p{font-size:12.5px}.benefit-card strong{font-size:14px}.benefit-note{font-size:10px}}
+
+.action-link{box-sizing:border-box;width:min(100%,290px);margin:0 auto;padding:15px 22px;border:1px solid #fffafc;background:linear-gradient(115deg,#e8dce7 0%,#fffdfd 46%,#f5edf5 68%,#e6d8e7 100%);box-shadow:inset 0 1px 1px #fff,0 0 14px #edc9e72b,0 0 28px #e5bcde16;color:#352b37;transition:box-shadow .25s ease,background .25s ease}
+.action-link:hover{background:linear-gradient(115deg,#f3e6f0,#fff,#eee0ef);box-shadow:inset 0 1px 1px #fff,0 0 19px #edc9e74a,0 0 34px #e5bcde24}
+@media(max-width:480px){.action-link{width:min(100%,252px);font-size:13px;padding:14px 18px}}
+@media(prefers-reduced-motion:reduce){.action-link{transition:none}}
+
+.head h1.intro-title{font-size:13px;line-height:1.65}
+@media(min-width:520px){.head h1.intro-title{font-size:14px}}
+@media(max-width:360px){.head h1.intro-title{font-size:12px}}
+.action-card .install-hint{font-size:11px;line-height:1.6;text-align:center;margin:12px auto 0;max-width:290px;color:#c9bcc8}</style></head><body><main class="wrap"><header class="head"><h1 class="intro-title">Карта дня, персональное исследование<br>и новые возможности для тебя.</h1></header>
+<section class="tarot-feature" aria-label="Карта дня SB METHOD"><div class="tarot-orbit" aria-hidden="true"></div><div class="tarot-brand">SB METHOD</div><div class="tarot-composition"><div class="tarot-copy"><h2 class="tarot-title">Твоя<br>карта дня</h2><p class="tarot-description">Ежедневные карты с содержательными расшифровками и идеями, на что обратить внимание.</p></div><div class="tarot-deck" aria-hidden="true"><div class="tarot-back back-outer-left"></div><div class="tarot-back back-outer-right"></div><div class="tarot-back back-one"></div><div class="tarot-back back-two"></div><div class="tarot-back front flipping-card"><div class="flip-inner revealed"><div class="flip-face flip-next"><img id="tarot-next" src="assets/tarot/magician.webp" alt="" width="640" height="960" decoding="async"></div><div class="flip-face flip-art"><img id="tarot-art" fetchpriority="high" loading="eager" src="assets/tarot/priestess.webp" alt="" width="640" height="960" decoding="async"></div></div></div></div></div><div class="tarot-caption-row"><p class="tarot-caption">Новая карта. Каждый день.</p></div></section><section class="benefits-panel"><h2>Открой для себя больше</h2><p class="panel-intro">Исследуй себя, пробуй новые навыки и организуй работу в одном пространстве.</p>
+
+<div class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2"/></svg></div><div><strong>Персональное исследование</strong><p>Твои сильные стороны, скрытые возможности и привычные сценарии — в персональном исследовании с рекомендациями для жизни.</p><span class="benefit-note">Мы разработали собственный вычислитель, который строит астрономическую основу твоей карты по данным NASA/JPL.</span></div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M4 5h7a3 3 0 0 1 3 3v12a3 3 0 0 0-3-3H4zM20 5h-3a3 3 0 0 0-3 3v12a3 3 0 0 1 3-3h3z"/></svg></div><div><strong>Мир онлайн-профессий</strong><p>Бесплатно изучи четыре направления и выбери своё. Узнай, как начать с нуля, найти первых клиентов и выстроить стабильный доход.</p><span class="benefit-note">SMM · Чат-боты · Таргет · Маркетплейсы</span></div></div>
+<div class="benefit-card"><div class="benefit-icon"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="15" height="17" rx="2"/><path d="m8 10 2 2 3-3M8 16h8"/></svg></div><div><strong>Трекер</strong><p>Для онлайн-специалистов: проекты, задачи и планы на день — в одном месте. Подсказки и система тайм-менеджмента помогут быстрее справляться с работой и доводить задачи до результата.</p></div></div>
+<div class="action-card"><strong>Получить доступ</strong><p>Установи SB METHOD и авторизуйся, чтобы получить доступ к карте дня, персональному исследованию, бесплатным урокам и рабочему трекеру.</p><a href="https://app.sb-method.space/pwa-install.html" class="action-link">Установить приложение</a><p class="install-hint">Покажем, как установить на телефон или компьютер</p></div></section><footer class="endline">SB METHOD · Авторская система онлайн-образования</footer></main><script src="assets/tarot-reveal.js" defer></script><script>/* Keep the invitation on the approved landing until the visitor opens the app. */
+(()=>{'use strict';
+ const key='sb-landing-invite-v1',age=30*86400000,valid=c=>typeof c==='string'&&/^[a-f0-9]{16}$/.test(c);
+ const code=new URLSearchParams(location.search).get('ref');let saved=null;
+ try{saved=JSON.parse(localStorage.getItem(key)||'null');}catch{}
+ if(!saved||!valid(saved.code)||!Number.isFinite(saved.at)||saved.at>Date.now()||Date.now()-saved.at>=age)saved=null;
+ if(!saved&&valid(code)){saved={code,at:Date.now()};try{localStorage.setItem(key,JSON.stringify(saved));}catch{}}
+ for(const a of document.querySelectorAll('a[href]')){
+  const u=new URL(a.href,location.href);
+  if(!['app.sb-method.space','sb-method-app-production.up.railway.app'].includes(u.hostname))continue;
+  u.protocol='https:';u.host='app.sb-method.space';
+  if(saved)u.searchParams.set('ref',saved.code);
+  a.href=u.href;
+ }
+})();
+</script></body></html>
